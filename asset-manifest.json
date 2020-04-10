@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/connect-four-rnw/static/js/app.f4cd8c8a.chunk.js",
-    "app.js.map": "/connect-four-rnw/static/js/app.f4cd8c8a.chunk.js.map",
+    "app.js": "/connect-four-rnw/static/js/app.bb8ca80d.chunk.js",
+    "app.js.map": "/connect-four-rnw/static/js/app.bb8ca80d.chunk.js.map",
     "runtime~app.js": "/connect-four-rnw/static/js/runtime~app.ce6d17e2.js",
     "runtime~app.js.map": "/connect-four-rnw/static/js/runtime~app.ce6d17e2.js.map",
     "static/js/2.6d106ab4.chunk.js": "/connect-four-rnw/static/js/2.6d106ab4.chunk.js",
@@ -16,6 +16,6 @@
   "entrypoints": [
     "static/js/runtime~app.ce6d17e2.js",
     "static/js/2.6d106ab4.chunk.js",
-    "static/js/app.f4cd8c8a.chunk.js"
+    "static/js/app.bb8ca80d.chunk.js"
   ]
 }

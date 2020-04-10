@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "226e27cb8e6dadb4156d",
-    "url": "/connect-four-rnw/static/js/app.f4cd8c8a.chunk.js"
+    "revision": "949c28aca6bee0885629",
+    "url": "/connect-four-rnw/static/js/app.bb8ca80d.chunk.js"
   },
   {
     "revision": "b3248bc9bdbfdc8aa63d",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/connect-four-rnw/favicon.ico"
   },
   {
-    "revision": "cf206da17cbfb20cf3011ae3b46009ee",
+    "revision": "bd440e57b112259f03bc26d49e5e2696",
     "url": "/connect-four-rnw/index.html"
   },
   {
