@@ -5,12 +5,12 @@ const colors = { null: 'white', 1: 'red', 2: 'blue' };
 
 export default ({ player, addPiece }) => (
   <TouchableOpacity
-  disabled={player !== null}
-  onPress={() => addPiece()}
-  style={[
-    styles.gamepiece,
-    { backgroundColor: colors[player] },
-  ]} />
+    disabled={player !== null}
+    onPress={() => addPiece()}
+    style={[
+      styles.gamepiece,
+      { backgroundColor: colors[player] },
+    ]} />
 );
 
 const styles = StyleSheet.create({

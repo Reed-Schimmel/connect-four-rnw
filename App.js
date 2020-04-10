@@ -6,6 +6,7 @@ import Popup from './src/components/Popup';
 export default () => {
   const [player, passUpSelectedPlayer] = useState(1);
   const [winner, setWinner] = useState(undefined);
+  const [boardKey, setBoardKey] = useState(1); // used to recreate the board object.
 
   return (
     <View style={styles.container}>
@@ -14,11 +15,15 @@ export default () => {
         message={winner === 'stale'
           ? "Stalemate!"
           : `Player ${winner} wins!`}
-        onPress={() => setWinner(undefined)}
+        onPress={() => { // reset state
+          setWinner(undefined);
+          setBoardKey(boardKey + 1);
+          passUpSelectedPlayer(1);
+        }}
         buttonTitle="Play Again"
         isVisible={winner}
       />}
-      <GameGrid passUpSelectedPlayer={passUpSelectedPlayer} setWinner={setWinner} />
+      <GameGrid passUpSelectedPlayer={passUpSelectedPlayer} setWinner={setWinner} key={boardKey} />
       <View style={styles.playerButtonView}>
         <TouchableOpacity disabled
           style={[styles.playerButtons, (player === 1) && { backgroundColor: 'red' }]}

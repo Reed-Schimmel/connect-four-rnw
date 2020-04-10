@@ -18,13 +18,16 @@ import { checkForWin } from '../functions';
 
 const makeBoard = () => Array(6).fill(null).map(() => Array(7).fill(null));
 
-const { height, width } = Dimensions.get("window");
+const { width } = Dimensions.get("window");
 export default ({ passUpSelectedPlayer, setWinner }) => {
   const [state, setState] = useState({
     board: makeBoard(),
     selectedPlayer: 1,
   });
 
+  // H.O.F for game rows / pieces to customize this action for their location
+  // Used to be important, now I think the higher order isn't needed, but
+  // don't break what isn't broken.
   const makeAddPiece = (r, c) => () => {
     const newBoard = [...state.board];
 
@@ -37,6 +40,7 @@ export default ({ passUpSelectedPlayer, setWinner }) => {
       i--;
     }
 
+    // change player and tell app state
     const selectedPlayer = state.selectedPlayer === 1 ? 2 : 1;
     passUpSelectedPlayer(selectedPlayer);
 
@@ -45,8 +49,9 @@ export default ({ passUpSelectedPlayer, setWinner }) => {
 
     if (winner) {
       setWinner(winner, newBoard);
-      setState({ board: makeBoard(), selectedPlayer: 1 }); // todo: ensure player 1 selected
     } else if (i === 0 && !newBoard[0].some(e => e === null)) {
+      // if we just filled the top slot and there are no more open spaces
+      // in the top slot, the game is over.
       setWinner('stale');
     } else {
       setState({ board: newBoard, selectedPlayer });

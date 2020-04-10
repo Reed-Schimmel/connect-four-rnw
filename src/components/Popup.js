@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 
+// Popup view
+
 export default ({ title, message, onPress, buttonTitle, isVisible }) => {
   return isVisible && (
     <View style={styles.backdrop}>
