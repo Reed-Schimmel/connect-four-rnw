@@ -3,7 +3,7 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker
-      .register('/connect-four/expo-service-worker.js', { scope: '/connect-four/' })
+      .register('/connect-four-rnw/expo-service-worker.js', { scope: '/connect-four-rnw/' })
       .then(function(info) {
         // console.info('Registered service-worker', info);
       })
