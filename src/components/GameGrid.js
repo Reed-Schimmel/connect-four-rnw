@@ -18,7 +18,6 @@ import { checkForWin } from '../functions';
 
 const makeBoard = () => Array(6).fill(null).map(() => Array(7).fill(null));
 
-const { width } = Dimensions.get("window");
 export default ({ passUpSelectedPlayer, setWinner }) => {
   const [state, setState] = useState({
     board: makeBoard(),
@@ -65,13 +64,22 @@ export default ({ passUpSelectedPlayer, setWinner }) => {
   );
 };
 
+let { height, width } = Dimensions.get("window");
+if (height >= width) {
+  height = 0.98 * (6 / 7) * width;
+  width = 0.98 * width;
+} else {
+  width = height;
+  height = (6 / 7) * height;
+}
+
 const styles = StyleSheet.create({
   grid: {
     borderWidth: 10,
     backgroundColor: 'purple',
     padding: 10,
-    width: 0.8 * width,
-    height: 0.8 * (6 / 7) * width,
+    width,
+    height,
     aspectRatio: 1,
   }
 });
