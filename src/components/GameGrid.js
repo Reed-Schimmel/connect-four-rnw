@@ -19,8 +19,7 @@ import { checkForWin } from '../functions';
 const makeBoard = () => Array(6).fill(null).map(() => Array(7).fill(null));
 
 const { height, width } = Dimensions.get("window");
-
-export default ({ passUpSelectedPlayer }) => {
+export default ({ passUpSelectedPlayer, setWinner }) => {
   const [state, setState] = useState({
     board: makeBoard(),
     selectedPlayer: 1,
@@ -29,28 +28,26 @@ export default ({ passUpSelectedPlayer }) => {
   const makeAddPiece = (r, c) => () => {
     const newBoard = [...state.board];
 
-    // let newRow;
-    // for (let i = 0; i < newBoard.length; i++) {
-    //   if (newBoard[i][c] === null && newBoard[i + 1][c] !== null) {
-    //     newRow = i + 1;
-    //   }
-    // }
-
-    // const floor = newBoard.reduce((prev = null, row, i) => (prev === null && row[c] !== null) ? i : null);
-    // console.log(newRow)
-
-    newBoard[r][c] = state.selectedPlayer;
+    let i = 5;
+    while (i >= 0) {
+      if (newBoard[i][c] === null) {
+        newBoard[i][c] = state.selectedPlayer;
+        break;
+      }
+      i--;
+    }
 
     const selectedPlayer = state.selectedPlayer === 1 ? 2 : 1;
     passUpSelectedPlayer(selectedPlayer);
 
-    const winner = checkForWin(newBoard, r, c);
+    const winner = checkForWin(newBoard, i, c);
     console.log('winner is player:', winner);
 
     if (winner) {
-      // TODO winner modal
-      // alert(`Winner is Player ${winner}`);
+      setWinner(winner, newBoard);
       setState({ board: makeBoard(), selectedPlayer: 1 }); // todo: ensure player 1 selected
+    } else if (i === 0 && !newBoard[0].some(e => e === null)) {
+      setWinner('stale');
     } else {
       setState({ board: newBoard, selectedPlayer });
     }
