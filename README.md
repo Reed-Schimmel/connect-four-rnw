@@ -1,6 +1,8 @@
 # Connect Four
 Written April 10th 2020 by Reed Schimmel.<br>
-An assigned project for my Programming Paradigms course at KU, spring 2020;
+An assigned project for my Programming Paradigms course at KU, spring 2020.
+
+### [Published App](https://reed-schimmel.github.io/connect-four-rnw/)
 
 # Setup
 ## Dependencies
