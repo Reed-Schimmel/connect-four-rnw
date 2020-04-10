@@ -12,6 +12,6 @@ An assigned project for my Programming Paradigms course at KU, spring 2020.
 ## Steps to run
 1. `git clone https://github.com/Reed-Schimmel/connect-four-rnw.git`
 2. In project root directory `npm install`
-3. `npm i -g expo-cli` (if you hven't already)
+3. `npm i -g expo-cli` (if you haven't already)
 4. `npm start`
 5. Go to http://localhost:19006 in web browser
