@@ -1,0 +1,21 @@
+{
+  "files": {
+    "app.js": "/connect-four/static/js/app.43bb2853.chunk.js",
+    "app.js.map": "/connect-four/static/js/app.43bb2853.chunk.js.map",
+    "runtime~app.js": "/connect-four/static/js/runtime~app.c8280f19.js",
+    "runtime~app.js.map": "/connect-four/static/js/runtime~app.c8280f19.js.map",
+    "static/js/2.9dce03fc.chunk.js": "/connect-four/static/js/2.9dce03fc.chunk.js",
+    "static/js/2.9dce03fc.chunk.js.map": "/connect-four/static/js/2.9dce03fc.chunk.js.map",
+    "favicon-16.png": "/connect-four/favicon-16.png",
+    "favicon-32.png": "/connect-four/favicon-32.png",
+    "favicon.ico": "/connect-four/favicon.ico",
+    "index.html": "/connect-four/index.html",
+    "manifest.json": "/connect-four/manifest.json",
+    "serve.json": "/connect-four/serve.json"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.c8280f19.js",
+    "static/js/2.9dce03fc.chunk.js",
+    "static/js/app.43bb2853.chunk.js"
+  ]
+}
